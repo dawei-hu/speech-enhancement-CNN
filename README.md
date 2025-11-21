@@ -65,19 +65,26 @@ Output shape: [batch, 1, freq_bins, frames].
 `cnn_enhancer_best.pth`
 
 ## Evaluation
+
+### Train vs Validation Loss Curve
+
 A separate test loop measures model performance on unseen data with the final test loss of 0.993886.
 The training and validation loss curve indicates that the model successfully learned features from training data, but also shows signs of overfitting.
-![Train vs Validation Loss Curvem](img/train_validation_loss_curve.png)
-Spectrogram comparison:
+![Train vs Validation Loss Curve](img/train_validation_loss_curve.png)
+
+### Spectrogram comparison
+
 ![Evaluation Spectrogram 1](img/evaluation_spectrogram_01.png)
 ![Evaluation Spectrogram 2](img/evaluation_spectrogram_02.png)
 
-### Enhanced Audio Samples
+### Listening Test
 
+Enhanced Audio Samples:
 - [Noisy sample](test/noisy_test_20250701_01.wav)
 - [Enhanced sample](test/enhanced_test_20250701_01.wav)
 - [Clean sample](test/clean_test_20250701_01.wav)
 
+The noise is noticeably reduced, but the speech sounds muffled and there are some noticeable grainy artifacts in the background.
 
 ## Future Work
 Training dataset diversity needs to be increased with speech audio of more people and mixed at more SNR levels. CNN model needs to have more complex structure. U-Net or CRN architectures are considered.
