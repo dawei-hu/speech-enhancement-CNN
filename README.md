@@ -32,7 +32,7 @@ Mixtures created at: 10 dB, 5 dB, 0 dB, -5 dB.
 
 4. Patch extraction
 
-Split into 64-frame blocks on time axis.
+Split into 64-frame blocks on the time axis.
 
 5. Dataset split:
 
@@ -56,7 +56,7 @@ Enhanced(f, t) = Mask(f, t) * Noisy(f, t)
 Output shape: [batch, 1, freq_bins, frames].
 
 2. Training loop:
-- Optimizer: AdamW
+- Optimiser: AdamW
 - Loss: L1 loss
 - Scheduler: StepLR (optional)
 - Early stopping: patience = 8
@@ -84,7 +84,7 @@ Enhanced Audio Samples:
 - [Enhanced sample](test/enhanced_test_20250701_01.wav)
 - [Clean sample](test/clean_test_20250701_01.wav)
 
-The noise is noticeably reduced, but the speech sounds muffled and there are some noticeable grainy artifacts in the background.
+The noise is noticeably reduced, but the speech sounds muffled and there are some noticeable grainy artefacts in the background.
 
 ## Future Work
-Training dataset diversity needs to be increased with speech audio of more people and mixed at more SNR levels. CNN model needs to have more complex structure. U-Net or CRN architectures are considered.
+Training dataset diversity needs to be increased with speech audio of more people and mixed at more SNR levels. The CNN model needs to have a more complex structure. U-Net or CRN architectures are considered.
